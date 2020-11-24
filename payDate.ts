@@ -30,6 +30,8 @@ const payDate = (year: number, month: number, payType: "base" | "bonus"):Date =>
         }
 
     }
+
+    //this should never run
     if(payDate === null) throw new Error("No date created, likely a problem with pay type");
 
     return payDate;
