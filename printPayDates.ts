@@ -15,9 +15,9 @@ const getPayDates = (startDate: Date) =>{
     console.log("Pay Type , Pay Date")
     for(let i = 0 ; i < 12 ; i++){
         const bonuseDate = payDate(year, month+ i , "bonus");
-        console.log(`Bonus Pay Date, "${bonuseDate}"`)
+        console.log(`Bonus Pay Date, "${bonuseDate.toLocaleDateString("en-GB",dateOptions)}"`)
         const baseDate= payDate(year, month+ i , "base");
-        console.log(`Base Pay Date, "${baseDate}"`)
+        console.log(`Base Pay Date, "${baseDate.toLocaleDateString("en-GB",dateOptions)}"`)
     }
 } 
 
