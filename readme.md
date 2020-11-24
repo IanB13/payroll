@@ -10,4 +10,4 @@ for custom date
 
 ```
 npm run getPayDates 12/12/20
-``
+```
