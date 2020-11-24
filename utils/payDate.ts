@@ -1,3 +1,4 @@
+// months start at 0, 0 is Jan 11 is Dec.
 const payDate = (year: number, month: number, payType: "base" | "bonus"):Date => {
     let payDate = null;
 
@@ -6,6 +7,8 @@ const payDate = (year: number, month: number, payType: "base" | "bonus"):Date =>
     if (payType === "bonus") {
         const midMonth = new Date(year, month, 15);
         const midMonthDay = midMonth.getDay();
+
+        // 0 is Sunday, 6 is Saturday
         if(midMonthDay === 0 || midMonthDay === 6){
             const plusDays = midMonthDay?4:3;
             payDate = new Date(year, month, 15 + plusDays); 

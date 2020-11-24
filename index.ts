@@ -1,4 +1,4 @@
-import printPayDates from "./printPayDates";
+import printPayDates from "./utils/printPayDates";
 
 if(process.argv.length === 2){
     printPayDates(new Date(Date.now()));
